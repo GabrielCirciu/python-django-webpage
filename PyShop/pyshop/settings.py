@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'products.apps.ProductsConfig'
+    'products.apps.ProductsConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,9 @@ ROOT_URLCONF = 'pyshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            Path(__file__).joinpath(BASE_DIR, 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
